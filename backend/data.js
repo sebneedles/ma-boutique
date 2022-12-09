@@ -13,7 +13,7 @@ const data = {
       description: 'High quality shirt',
     },
     {
-      name: 'Adida Fit Shirt',
+      name: 'Adidas Fit Shirt',
       slug: 'adidas-fit-shirt',
       category: 'Shirts',
       image: '/images/p2.jpg',

@@ -49,3 +49,8 @@
    3. Get state from usReducer
 
 8. Add Footer & Hero Components
+
+9. Create Product and Rating Component
+   1. Create rating component
+   2. Create product component
+   3. Use rating component in product component
