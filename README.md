@@ -35,8 +35,14 @@
    12. run npm start
 
 6. Fetch Products From Backend
+
    1. Set proxy in package.json
    2. npm install axios
    3. use state hook
    4. use effect hook
    5. use reducer hook
+
+7. Manage State by Reducer hook
+   1. Define Reducer
+   2. Update Fetch Data
+   3. Get state from usReducer
