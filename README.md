@@ -20,6 +20,7 @@
    3. Create Router for Product screen
 
 5. Creat Node.JS Server
+
    1. run npm init in root folder
    2. Update package.json set type: module
    3. Add .js ti imports
@@ -32,3 +33,10 @@
    10. Create Route for /api/products
    11. Return products
    12. run npm start
+
+6. Fetch Products From Backend
+   1. Set proxy in package.json
+   2. npm install axios
+   3. use state hook
+   4. use effect hook
+   5. use reducer hook
