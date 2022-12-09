@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logger from 'use-reducer-logger';
+import Hero from '../components/hero/Hero';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -36,31 +37,33 @@ function HomeScreen() {
     fetchData();
   }, []);
   return (
-    <div>
-      <h1>Home Products</h1>
-      <div className="products">
-        {loading ? (
-          <div>Chargement ...</div>
-        ) : error ? (
-          <div>{error}</div>
-        ) : (
-          products.map((product) => (
-            <div className="product" key={product.slug}>
-              <Link to={`/product/${product.slug}`}>
-                <img src={product.image} alt={product.name} />
-              </Link>
-              <div className="product-info">
+    <>
+      <Hero />
+      <section className="home">
+        <div className="products">
+          {loading ? (
+            <div>Chargement ...</div>
+          ) : error ? (
+            <div>{error}</div>
+          ) : (
+            products.map((product) => (
+              <div className="product" key={product.slug}>
                 <Link to={`/product/${product.slug}`}>
-                  <p>{product.name}</p>
+                  <img src={product.image} alt={product.name} />
                 </Link>
-                <p>{product.price}</p>
-                <button>Add to cart</button>
+                <div className="product-info">
+                  <Link to={`/product/${product.slug}`}>
+                    <p>{product.name}</p>
+                  </Link>
+                  <p>{product.price}</p>
+                  <button>Add to cart</button>
+                </div>
               </div>
-            </div>
-          ))
-        )}
-      </div>
-    </div>
+            ))
+          )}
+        </div>
+      </section>
+    </>
   );
 }
 

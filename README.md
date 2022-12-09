@@ -43,6 +43,9 @@
    5. use reducer hook
 
 7. Manage State by Reducer hook
+
    1. Define Reducer
    2. Update Fetch Data
    3. Get state from usReducer
+
+8. Add Footer & Hero Components
