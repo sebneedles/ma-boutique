@@ -1,6 +1,5 @@
 import axios from 'axios';
-import { useEffect, useReducer, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useReducer } from 'react';
 import logger from 'use-reducer-logger';
 import Hero from '../components/hero/Hero';
 import Product from '../components/product/Product';

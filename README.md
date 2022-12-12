@@ -2,55 +2,65 @@
 
 # STEPS
 
-1. Create React App
+1. Create React App.
 
-2. Create Git Repository
+2. Create Git Repository.
 
-3. List Products
+3. List Products.
 
-   1. Create product array
-   2. Add product images
-   3. render products
-   4. Style products
+   a. Create product array.
+   b. Add product images.
+   c. render products.
+   d. Style products.
 
-4. Add Routing
+4. Add Routing.
 
-   1. npm install react-router-dom
-   2. Create Route for Home Screen
-   3. Create Router for Product screen
+   a. npm install react-router-dom.
+   b. Create Route for Home Screen.
+   c. Create Router for Product screen.
 
-5. Creat Node.JS Server
+5. Creat Node.JS Server.
 
-   1. run npm init in root folder
-   2. Update package.json set type: module
-   3. Add .js ti imports
-   4. npm install express
-   5. Create server.js
-   6. Add start command as node backend/server.js
-   7. require express
-   8. Create Route for / return backend is ready
-   9. Move products.js from frontend tobackend
-   10. Create Route for /api/products
-   11. Return products
-   12. run npm start
+   a. run npm init in root folder.
+   b. Update package.json set type: module.
+   c. Add .js ti imports.
+   d. npm install express.
+   e. Create server.js.
+   f. Add start command as node backend/server.js.
+   g. require express.
+   h. Create Route for / return backend is ready.
+   i. Move products.js from frontend tobackend.
+   j. Create Route for /api/products.
+   k. Return products.
+   l. run npm start.
 
-6. Fetch Products From Backend
+6. Fetch Products From Backend.
 
-   1. Set proxy in package.json
-   2. npm install axios
-   3. use state hook
-   4. use effect hook
-   5. use reducer hook
+   a. Set proxy in package.json.
+   b. npm install axios.
+   c. use state hook.
+   d. use effect hook.
+   e. use reducer hook.
 
-7. Manage State by Reducer hook
+7. Manage State by Reducer hook.
 
-   1. Define Reducer
-   2. Update Fetch Data
-   3. Get state from usReducer
+   a. Define Reducer.
+   b. Update Fetch Data.
+   c. Get state from usReducer.
 
-8. Add Footer & Hero Components
+8. Step 8.
 
-9. Create Product and Rating Component
-   1. Create rating component
-   2. Create product component
-   3. Use rating component in product component
+9. Add Footer & Hero Components.
+
+10. Step 10.
+
+11. Create Product and Rating Component.
+
+a. Create rating component.
+b. Create product component.
+c. Use rating component in product component.
+
+12. Create Product details screen.
+
+a. Fetch product from backend.
+b. Create 3 columns for image, infos and actions.

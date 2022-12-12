@@ -73,11 +73,16 @@ HERO
   top: 50%;
   left: 13.5%;
   transform: translate(0%, -50%);
-  max-width: 460px;
+  max-width: 380px;
   width: 100%;
 }
 
 .hero__infos-title {
+  font-size: 3rem;
+  color: #404040;
+}
+
+.hero__infos-title span {
   background: linear-gradient(142deg, #6c45ff, #e22fff);
   background-clip: text;
   -moz-background-clip: text;
@@ -85,10 +90,9 @@ HERO
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   -o-text-fill-color: transparent;
-  font-size: 3rem;
 }
 /* -------------------------------------------------------------------------------- 
-PRODUCTS
+PRODUCTS PAGE
 -------------------------------------------------------------------------------- */
 .products {
   display: flex;
@@ -130,6 +134,72 @@ PRODUCTS
 
 .rating span {
   color: #e22fff;
+}
+
+/* -------------------------------------------------------------------------------- 
+PRODUCT PAGE
+-------------------------------------------------------------------------------- */
+.product {
+  margin-top: 2rem;
+}
+.single__product {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.single__product-image {
+  width: 50%;
+  flex: 0 0 auto;
+}
+.img-large {
+  max-width: 100%;
+}
+.item {
+  background-color: #fff;
+  border-width: 0 0 1px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  color: #212529;
+  display: block;
+  padding: 0.5rem 1rem;
+  position: relative;
+  text-decoration: none;
+}
+.single__product-infos {
+  width: 25%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  border-width: 0 0 1px;
+}
+.single__product-actions {
+  width: 25%;
+  flex: 0 0 auto;
+}
+.status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.badge {
+  border-radius: 0.25rem;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  padding: 0.35em 0.65em;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+.success {
+  background-color: green;
+}
+.danger {
+  background-color: red;
 }
 
 /* -------------------------------------------------------------------------------- 
