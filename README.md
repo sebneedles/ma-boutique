@@ -77,3 +77,7 @@ b. Create 3 columns for image, infos and actions.
     c. create store provider
     d. implement ajouter au panier button click handler
     e. install Bootstrap
+
+15. Complete Ajouter au panier
+    a. Check exist item in the cart
+    b. Check count in stock in backend
