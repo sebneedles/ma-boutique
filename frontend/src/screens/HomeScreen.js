@@ -2,6 +2,8 @@ import axios from 'axios';
 import { useEffect, useReducer } from 'react';
 import logger from 'use-reducer-logger';
 import Hero from '../components/hero/Hero';
+import LoadingBox from '../components/loading-box/LoadingBox';
+import MessageBox from '../components/message-box/MessageBox';
 import Product from '../components/product/Product';
 
 const reducer = (state, action) => {
@@ -42,9 +44,9 @@ function HomeScreen() {
       <section className="home">
         <div className="products">
           {loading ? (
-            <div>Chargement ...</div>
+            <LoadingBox />
           ) : error ? (
-            <div>{error}</div>
+            <MessageBox>{error}</MessageBox>
           ) : (
             products.map((product) => (
               <Product key={product.slug} product={product}></Product>
