@@ -1,11 +1,18 @@
 import axios from 'axios';
-import { useEffect, useReducer } from 'react';
+import { useContext, useEffect, useReducer } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import LoadingBox from '../components/loading-box/LoadingBox';
 import MessageBox from '../components/message-box/MessageBox';
 import Rating from '../components/rating/Rating';
+import { Store } from '../Store';
 import { getError } from '../Utils';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Badge from 'react-bootstrap/Badge';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -43,71 +50,90 @@ function ProductScreen() {
     fetchData();
   }, [slug]);
 
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const addToCartHandler = () => {
+    ctxDispatch({
+      type: 'CART_ADD_ITEM',
+      payload: { ...product, quantity: 1 },
+    });
+  };
+
   return loading ? (
     <section className="product">
       <LoadingBox />
     </section>
   ) : error ? (
     <section className="product">
-      <MessageBox>{error}</MessageBox>
+      <MessageBox variant="danger">{error}</MessageBox>
     </section>
   ) : (
     <>
       <section className="product">
-        <div className="single__product">
-          {/* Colonne 1 */}
-          <div className="single__product-image">
-            <img className="img-large" src={product.image} alt={product.name} />
-          </div>
+        <Row>
+          <Col md={6}>
+            <img
+              className="img-large"
+              src={product.image}
+              alt={product.name}
+            ></img>
+          </Col>
+          <Col md={3}>
+            <ListGroup variant="flush">
+              <ListGroup.Item>
+                <Helmet>
+                  <title>{product.name}</title>
+                </Helmet>
+                <h1>{product.name}</h1>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Rating
+                  rating={product.rating}
+                  numReviews={product.numReviews}
+                ></Rating>
+              </ListGroup.Item>
+              <ListGroup.Item>Prix : {product.price} €</ListGroup.Item>
+              <ListGroup.Item>
+                <p>Description : {product.description}</p>
+              </ListGroup.Item>
+            </ListGroup>
+          </Col>
+          <Col md={3}>
+            <Card>
+              <Card.Body>
+                <ListGroup variant="flush">
+                  <ListGroup.Item>
+                    <Row>
+                      <Col>Prix :</Col>
+                      <Col>{product.price} €</Col>
+                    </Row>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Row>
+                      <Col>Status :</Col>
+                      <Col>
+                        {product.countInStock > 0 ? (
+                          <Badge bg="success">En stock</Badge>
+                        ) : (
+                          <Badge bg="danger">Indisponible</Badge>
+                        )}
+                      </Col>
+                    </Row>
+                  </ListGroup.Item>
 
-          {/* Colonne 2 */}
-          <div className="single__product-infos">
-            <div className="item">
-              <Helmet>
-                <title>{product.name}</title>
-              </Helmet>
-              <h1>{product.name}</h1>
-            </div>
-
-            <div className="item">
-              <div className="description">
-                <p>
-                  <strong>Description :</strong> {product.description}
-                </p>
-              </div>
-            </div>
-            <div className="item">
-              <Rating rating={product.rating} numReviews={product.numReviews} />
-            </div>
-          </div>
-
-          {/* Colonne 3 */}
-          <div className="single__product-actions">
-            <div className="item">
-              <div className="price">
-                <strong>Prix : </strong>
-                {product.price} €
-              </div>
-            </div>
-            <div className="item">
-              <div className="status">
-                <p>
-                  <strong>Status :</strong>{' '}
-                </p>
-                {product.countInStock > 0 ? (
-                  <div className="badge success">En stock</div>
-                ) : (
-                  <div className="badge danger">Indisponible</div>
-                )}
-              </div>
-            </div>
-            {product.countInStock > 0 && (
-              <div className="item">
-                <button>Ajouter au panier</button>
-              </div>
-            )}
-          </div>
-        </div>
+                  {product.countInStock > 0 && (
+                    <ListGroup.Item>
+                      <div className="d-grid">
+                        <Button onClick={addToCartHandler} variant="primary">
+                          Ajouter au panier
+                        </Button>
+                      </div>
+                    </ListGroup.Item>
+                  )}
+                </ListGroup>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </section>
     </>
   );

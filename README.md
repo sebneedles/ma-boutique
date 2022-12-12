@@ -70,3 +70,10 @@ b. Create 3 columns for image, infos and actions.
     b. use spinner component
     c. create message component
     d. create utils.js to define getError function
+
+14. Implement Ajouter au panier
+    a. Create react context
+    b. definer reducer
+    c. create store provider
+    d. implement ajouter au panier button click handler
+    e. install Bootstrap

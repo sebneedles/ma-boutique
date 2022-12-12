@@ -5,6 +5,8 @@ import Hero from '../components/hero/Hero';
 import LoadingBox from '../components/loading-box/LoadingBox';
 import MessageBox from '../components/message-box/MessageBox';
 import Product from '../components/product/Product';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -38,6 +40,7 @@ function HomeScreen() {
     };
     fetchData();
   }, []);
+
   return (
     <>
       <Hero />
@@ -48,9 +51,13 @@ function HomeScreen() {
           ) : error ? (
             <MessageBox>{error}</MessageBox>
           ) : (
-            products.map((product) => (
-              <Product key={product.slug} product={product}></Product>
-            ))
+            <Row>
+              {products.map((product) => (
+                <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+                  <Product product={product}></Product>
+                </Col>
+              ))}
+            </Row>
           )}
         </div>
       </section>

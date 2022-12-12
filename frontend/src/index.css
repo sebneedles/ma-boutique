@@ -10,6 +10,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.site-container {
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 h1,
 h2,
 h3,
@@ -80,32 +88,14 @@ MESSAGE ERROR
 /* -------------------------------------------------------------------------------- 
 HEADER
 -------------------------------------------------------------------------------- */
-header {
-  background-color: #404040;
-  padding: 1rem;
-}
-header a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-}
 
 /* -------------------------------------------------------------------------------- 
 NAV
 -------------------------------------------------------------------------------- */
-nav {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-}
 
 /* -------------------------------------------------------------------------------- 
 MAIN
 -------------------------------------------------------------------------------- */
-main {
-  padding: 0;
-  min-height: 83vh;
-}
 
 /* -------------------------------------------------------------------------------- 
 HERO
@@ -235,25 +225,6 @@ PRODUCT PAGE
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-.badge {
-  border-radius: 0.25rem;
-  color: #fff;
-  display: inline-block;
-  font-size: 0.75em;
-  font-weight: 700;
-  line-height: 1.5rem;
-  height: 1.5rem;
-  padding: 0.35em 0.65em;
-  text-align: center;
-  vertical-align: baseline;
-  white-space: nowrap;
-}
-.success {
-  background-color: green;
-}
-.danger {
-  background-color: red;
 }
 
 /* -------------------------------------------------------------------------------- 

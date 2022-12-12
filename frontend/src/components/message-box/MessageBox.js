@@ -1,16 +1,5 @@
-import { NavLink } from 'react-router-dom';
+import Alert from 'react-bootstrap/Alert';
 
 export default function MessageBox(props) {
-  return (
-    <>
-      <div className="message__error">
-        <span>{props.children}</span>
-      </div>
-      <section>
-        <NavLink to="/" className="link-error">
-          retourner a l'accueil
-        </NavLink>
-      </section>
-    </>
-  );
+  return <Alert variant={props.variant || 'info'}>{props.children}</Alert>;
 }

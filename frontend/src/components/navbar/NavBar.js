@@ -5,10 +5,8 @@ const NavBar = () => {
   return (
     <>
       <nav>
-        <div className="container">
-          <div className="container__link">
-            <Link to="/">Ma Boutique</Link>
-          </div>
+        <div className="container__link">
+          <Link to="/">Ma Boutique</Link>
         </div>
       </nav>
     </>
