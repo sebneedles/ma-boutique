@@ -102,3 +102,10 @@ b. Create 3 columns for image, infos and actions.
     b. install local mongodb
     c. npm install mongoose
     d. connect to mongodb
+
+20. Seed Sample Data
+    a. Create product model
+    b. Create user model
+    c. Create seed route
+    d. Use route in server.js
+    e. Seed sample product
