@@ -109,3 +109,8 @@ b. Create 3 columns for image, infos and actions.
     c. Create seed route
     d. Use route in server.js
     e. Seed sample product
+
+21. Seed sample Users
+    a. create user model
+    b. seed sample users
+    c. create user routes
