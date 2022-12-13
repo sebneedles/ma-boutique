@@ -96,3 +96,9 @@ b. Create 3 columns for image, infos and actions.
     a. create signin form
     b. add email and password
     c. add signin button
+
+19. Connect to MongoDB Database
+    a. create Atlas mongodb
+    b. install local mongodb
+    c. npm install mongoose
+    d. connect to mongodb
