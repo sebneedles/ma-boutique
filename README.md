@@ -119,3 +119,8 @@ b. Create 3 columns for image, infos and actions.
     a. create signin api
     b. npm install jsonwebtoken
     c. define generateToken
+
+23. Complete Signin screen
+    a. handle submit action
+    b. save token in store and localStorage
+    c. show user name in header

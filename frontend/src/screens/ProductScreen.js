@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useContext, useEffect, useReducer } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import LoadingBox from '../components/loading-box/LoadingBox';
 import MessageBox from '../components/message-box/MessageBox';
 import Rating from '../components/rating/Rating';
