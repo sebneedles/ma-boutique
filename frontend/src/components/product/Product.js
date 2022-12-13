@@ -2,9 +2,31 @@ import { Link } from 'react-router-dom';
 import Rating from '../rating/Rating';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
+import { useContext } from 'react';
+import { Store } from '../../Store';
 
 function Product(props) {
   const { product } = props;
+
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const {
+    cart: { cartItems },
+  } = state;
+
+  const addToCartHandler = async (item) => {
+    const existItem = cartItems.find((x) => x._id === product._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const { data } = await axios.get(`/api/products/${item._id}`);
+    if (data.countInStock < quantity) {
+      window.alert("Désolé, ce produit n'est plus en stock.");
+      return;
+    }
+    ctxDispatch({
+      type: 'CART_ADD_ITEM',
+      payload: { ...item, quantity },
+    });
+  };
 
   return (
     <Card>
@@ -21,7 +43,15 @@ function Product(props) {
         </Link>
         <Rating rating={product.rating} numReviews={product.numReviews} />
         <Card.Text>{product.price} €</Card.Text>
-        <Button>Ajouter au panier</Button>
+        {product.countInStock === 0 ? (
+          <Button variant="light" disabled>
+            Plus en stock
+          </Button>
+        ) : (
+          <Button onClick={() => addToCartHandler(product)}>
+            Ajouter au panier
+          </Button>
+        )}
       </Card.Body>
     </Card>
   );

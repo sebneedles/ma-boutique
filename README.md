@@ -86,3 +86,8 @@ b. Create 3 columns for image, infos and actions.
     a. create 2 columns
     b. display item list
     c. create action column
+
+17. Complete cart screen
+    a. click handler for inc/dec item
+    b. click handler for remove item
+    c. click handler for checkout
