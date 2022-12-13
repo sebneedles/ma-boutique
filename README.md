@@ -81,3 +81,8 @@ b. Create 3 columns for image, infos and actions.
 15. Complete Ajouter au panier
     a. Check exist item in the cart
     b. Check count in stock in backend
+
+16. Create Cart Screen
+    a. create 2 columns
+    b. display item list
+    c. create action column
