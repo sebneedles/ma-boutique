@@ -91,3 +91,8 @@ b. Create 3 columns for image, infos and actions.
     a. click handler for inc/dec item
     b. click handler for remove item
     c. click handler for checkout
+
+18. Create Signin Screen
+    a. create signin form
+    b. add email and password
+    c. add signin button
