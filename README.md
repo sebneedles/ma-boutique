@@ -114,3 +114,8 @@ b. Create 3 columns for image, infos and actions.
     a. create user model
     b. seed sample users
     c. create user routes
+
+22. Create signin backend API
+    a. create signin api
+    b. npm install jsonwebtoken
+    c. define generateToken
