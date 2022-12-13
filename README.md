@@ -124,3 +124,8 @@ b. Create 3 columns for image, infos and actions.
     a. handle submit action
     b. save token in store and localStorage
     c. show user name in header
+
+24. Creat Shipping Screen
+    a. create form inputs
+    b. handle save shipping address
+    c. add checkout wizard bar
