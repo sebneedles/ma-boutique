@@ -129,3 +129,8 @@ b. Create 3 columns for image, infos and actions.
     a. create form inputs
     b. handle save shipping address
     c. add checkout wizard bar
+
+25. Create Signup screen
+    a. create inputs form
+    b. handle submit
+    c. create backend api

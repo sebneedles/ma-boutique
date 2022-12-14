@@ -104,8 +104,8 @@ export default function CartScreen() {
               <ListGroup variant="flush">
                 <ListGroup.Item>
                   <h3>
-                    Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
-                    items) : €
+                    Sous total ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
+                    article) : €
                     {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
                   </h3>
                 </ListGroup.Item>
