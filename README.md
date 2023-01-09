@@ -134,3 +134,7 @@ b. Create 3 columns for image, infos and actions.
     a. create inputs form
     b. handle submit
     c. create backend api
+
+26. Implement select payment method screen
+    a. create inputs form
+    b. handle submit
