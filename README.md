@@ -138,3 +138,9 @@ b. Create 3 columns for image, infos and actions.
 26. Implement select payment method screen
     a. create inputs form
     b. handle submit
+
+27. Create place order screen
+    a. show cart items, payment and address
+    b. handle place order action
+    c. create order
+    d. create api
