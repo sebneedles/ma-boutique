@@ -147,3 +147,8 @@ b. Create 3 columns for image, infos and actions.
 28. Implement place order action
     a. handle place order action
     b. create order create api
+
+29. Create order screen
+    a. create backend api for order/:id
+    b. fetch order api in frontend
+    c. sho order information in 2 columns
