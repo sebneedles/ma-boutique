@@ -142,5 +142,8 @@ b. Create 3 columns for image, infos and actions.
 27. Create place order screen
     a. show cart items, payment and address
     b. handle place order action
-    c. create order
-    d. create api
+    c. create order create api
+
+28. Implement place order action
+    a. handle place order action
+    b. create order create api
