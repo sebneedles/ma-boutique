@@ -168,3 +168,9 @@ b. Create 3 columns for image, infos and actions.
     a. create order screen
     b. create order history api
     c. use api in the frontend
+
+32. Create Profile Screen
+    a. get user info from context
+    b. show user information
+    c. create user update api
+    d. update user info
