@@ -152,3 +152,14 @@ b. Create 3 columns for image, infos and actions.
     a. create backend api for order/:id
     b. fetch order api in frontend
     c. sho order information in 2 columns
+
+30. Pay order by Paypal
+    a. generate paypal client id
+    b. create api to return client id
+    c. install react-paypal-js in frontend
+    d. use PaypalScriptProvider in index.js
+    e. use PaypalScriptReducer in order screen
+    f. implement loadPaypalScript function
+    g. render paypal button
+    h. implement onApprove payment function
+    i. create pay order api in backend
