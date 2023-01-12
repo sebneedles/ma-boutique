@@ -163,3 +163,8 @@ b. Create 3 columns for image, infos and actions.
     g. render paypal button
     h. implement onApprove payment function
     i. create pay order api in backend
+
+31. Display Order history
+    a. create order screen
+    b. create order history api
+    c. use api in the frontend
